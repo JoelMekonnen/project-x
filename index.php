@@ -13,10 +13,10 @@
             <div class = "content-header">
                 <h2>Manager</h2>
                 <ul>
-                 <li><a href="#"><img src="Icons/notification.png"width=30px height=30px  id = "notify"></a></li>
-                <li><a href=" index.php?type=about"><img src="Icons/apps.png" width=30px height=30px  id = "apps"></a></li>
+                 <li><a href="index.php?type=about"><img src="Icons/notification.png"width=30px height=30px  id = "About"></a></li>
+                <li><a href="index.php"><img src="Icons/apps.png" width=30px height=30px  id = "Home"></a></li>
                 <li><a href="index.php?type=login"><img src="Icons/next-page.png"width=30px height=30px onmouseover = "" id = "Login" onmouseover=""></a></li>
-                <li><a href="index.php?type=signup"><img src="Icons/new-file.png" width=30px height=30px id = "signup" onmouseover=""></a></li>
+                <li><a href="index.php?type=signup"><img src="Icons/new-file.png" width=30px height=30px id = "Signup" onmouseover=""></a></li>
                 </ul>
             </div>
             <div class = "content-body">
@@ -29,10 +29,10 @@
                 </div>
                 <div class = "nav">
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">About-us</a></li>
+                    <li><a href="#" id = "txt_Home">Home</a></li>
+                    <li><a href="#" id = "txt_Login">Login</a></li>
+                    <li><a href="#" id = "txt_Signup">Sign Up</a></li>
+                    <li><a href="#" id = "txt_About">About-us</a></li>
                   </ul>
                 </div>
             </div>
