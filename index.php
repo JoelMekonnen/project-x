@@ -12,12 +12,12 @@
         <div class = "content">
             <div class = "content-header">
                 <h2>Manager</h2>
-                <ul>
-                 <li><a href="index.php?type=about"><img src="Icons/notification.png"width=30px height=30px  id = "About"></a></li>
+              <ul>
+                <li><a href="index.php?type=about"><img src="Icons/notification.png"width=30px height=30px  id = "About"></a></li>
                 <li><a href="index.php"><img src="Icons/apps.png" width=30px height=30px  id = "Home"></a></li>
                 <li><a href="index.php?type=login"><img src="Icons/next-page.png"width=30px height=30px onmouseover = "" id = "Login" onmouseover=""></a></li>
                 <li><a href="index.php?type=signup"><img src="Icons/new-file.png" width=30px height=30px id = "Signup" onmouseover=""></a></li>
-                </ul>
+              </ul>
             </div>
             <div class = "content-body">
                 <div class = "fullWidth">
@@ -72,16 +72,24 @@
           <body>
              <div class = "LoginBox">
                 <div class = "justBorder">
-                     <h3>Login</h3>
+                  <h3>Login</h3>
                  <form method = "post" action = "login.php" name = 'loginForm'>
-              <div id = "username_box">  <img src = "./Icons/user.png" width=30 height=40>  <input type ="text" placeholder = "username" name = "txtUser" id = "txt_username"/></div><div id = "check_Status"></div><br>
-                    <div id = "password_box">  <img src = "./Icons/padlock.png" width = 40 height = 30> <input type = "password" placeholder = "password" name = "txtUser" id = "txt_password"/><br></div>
-             <input type = "image" id = "submit" src = "./Icons/next-page.png" width = 40  height = 40 value = "Login"/><br>
-                     </form>
+                 <div id = "username_box">  <img src = "./Icons/user.png" width=30 height=40>  <input type ="text" placeholder = "username" name = "txtUser" id = "txt_username"/></div><span id = "check_Status"></span><br>
+                 <div id = "password_box">  <img src = "./Icons/padlock.png" width = 40 height = 30> <input type = "password" placeholder = "password" name = "txtUser" id = "txt_password"/><br></div>
+                 <input type = "image" id = "submit" src = "./Icons/next-page.png" width = 40  height = 40 /><br>
+                </form>
                 </div>
-            </div>
-          </body>
-          <style>
+             </div>
+           </body>
+        <style>
+                #check_Status {
+                   display: inline-block;
+                   float: right;
+                   margin-right: 38%;
+                   position: relative;
+                  top: -30px;
+
+                }
                 #txt_username, #txt_password  {
                   border-top-style: none;
                   border-left-style: none;
@@ -125,23 +133,22 @@
                  font-family: "source sans";
                  font-size: 41px;
               }
-              #submit{
+              #submit {
                 margin-left: 500px;
                 margin-top: 30px;
               }
 
           </style>
           <script>
-
-              var myForms = document.forms.loginForm;
+              var myForms = document.loginForm;
               myForms.onsubmit = function(){
-                    if(myForms.txtUser.value == "")
+                    if(document.getElementById("txt_username").value == "")
                     {
-                       document.getElementById("check_Status").innerHtml = "<h4>" + "please insert your username" + "</h4>";
-                       return false;
+                      document.getElementById("check_Status").innerHTML =  '<img src = "./Icons/close.png" width = 20 height = 20>' + '</img>';
+                      return false;
                     }
                     else {
-                      document.getElementById("check_Status").innerHtml = '';
+                      document.getElementById("check_Status").style.display = "hidden";
                       return true;
                     }
               };
